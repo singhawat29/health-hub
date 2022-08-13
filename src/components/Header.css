@@ -1,0 +1,137 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    /*position: fixed;*/
+   /* background-color: antiquewhite;*/
+}
+.header {
+    background: #FFF;
+    height: 6rem;
+}
+.header-con{
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+    align-items: center;
+    font-family: Kanit;
+}
+.logo-container a {
+    color: #000000;
+}
+.logo-container a img{
+    height: 3rem;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+.menu li {
+    padding-right: 2rem;
+}
+.menu li a {
+    text-decoration: none;
+    color: #000000;
+}
+.mobile-menu {
+    display: none;
+}
+button {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #009444;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  .mobile-header{
+    display: none;
+}
+
+@media  screen and (max-width: 700px) {
+    .header {
+        display: none;
+      }
+    .container {
+        padding: 0rem;}
+    
+    .mobile-menu {
+        display: block;
+        color: #000000;
+        font-size: 2rem;
+    }
+    .header {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .menu {
+        width: 100%;
+        height: auto;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 90px;
+        left: -100%;
+        opacity: 0;
+        /*background: #000000;*/
+        transition: 0.5s ease;
+    }
+    .menu.active {
+        background: #FFF8EA;
+        left: 0;
+        opacity: 1;
+        z-index: 1;
+        padding-left: 0;
+        align-content: center;
+        transition: 0.5s ease;
+    }
+    .menu li {
+        padding-right: 0;
+    }
+    .menu-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vw;
+        padding: 10px 0;
+    }
+    .mobile-header{
+        display: inline;
+        background: #fff;
+        height: 6.25rem;
+        position: sticky;
+        top:0px;
+        
+    }
+    .mobile-container{
+        max-width: 430px;
+        margin: 0 auto;
+        background: #fff;
+        height: 6.25rem;
+        padding:0 0.5rem;
+        
+    }
+    .mobile-header-con{
+        display: flex;
+        justify-content: space-between;
+        height: 6.25rem;
+        align-items: center;
+        
+    }
+    .mobile-profile img {
+        max-height: 70px;
+        max-width: 70px;
+    }
+    .mobile-logotext img {
+        max-height: 35px;
+        max-width: 200px;
+    }
+    .mobile-notification img {
+        max-height: 50px;
+        max-width: 50px;
+    }
+}

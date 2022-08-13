@@ -1,0 +1,42 @@
+.mobile-footer{
+    display: none;
+}
+
+@media  screen and (max-width: 700px) {
+   
+    .mobile-footer{
+        display: inline;
+        background: #FFF8EA;
+        height: 4.375rem;
+       /* position: sticky;
+        top:0px;*/
+        
+    }
+    .mobile-container-footer{
+        max-width: 430px;
+        margin: 0 auto;
+        background: #fafafa;
+        height: 4.375rem;
+        padding:0 1rem;
+        
+    }
+    .mobile-header-con-footer{
+        display: flex;
+        justify-content: space-between;
+        height: 4.375rem;
+        align-items: center;
+        
+    }
+    .mobile-report img {
+        max-height: 70px;
+        max-width: 70px;
+    }
+    .mobile-logo img {
+        max-height: 70px;
+        max-width: 70px;
+    }
+    .mobile-Group img {
+        max-height: 70px;
+        max-width: 70px;
+    }
+}

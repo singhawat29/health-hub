@@ -1,0 +1,13 @@
+.banner-bg{
+    background: #fff;
+    padding: 0.5rem;
+}
+.container-home{
+    max-width: 1440px; 
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    background: #fafa4f;
+    border-radius: 10px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.15rem;
+}
