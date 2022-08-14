@@ -1,5 +1,9 @@
 .SFAFAFA{
-    background: red;
+    background: #c7c4c4;
     height: 8px;
     width: 100%;
+}
+.logo-container-Profile img{
+    max-height: 35px;
+    max-width: 200px;
 }

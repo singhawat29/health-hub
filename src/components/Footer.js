@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <Router>
+    <>
       <div className="mobile-footer">
         <div className="mobile-container-footer">
           <div className="mobile-header-con-footer">
@@ -18,7 +18,6 @@ function Footer() {
               </Link>
             </div>
             <div className="mobile-logo">
-              {" "}
               <Link to="/">
                 <img src={logo_HealthHub} alt="logo" />
               </Link>
@@ -32,7 +31,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </Router>
+    </>
   );
 }
 

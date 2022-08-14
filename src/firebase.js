@@ -5,10 +5,12 @@ import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+import { getDatabase } from "firebase/database";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAAeMlYvwSL4vlGpH0T7NbqsbBzBFoc01E",
   authDomain: "health-hub-de64d.firebaseapp.com",
+  databaseURL: "https://health-hub-de64d-default-rtdb.firebaseio.com",
   projectId: "health-hub-de64d",
   storageBucket: "health-hub-de64d.appspot.com",
   messagingSenderId: "684292140590",
@@ -22,3 +24,4 @@ export { app };
 export const google = new GoogleAuthProvider();
 export const db = getFirestore(app);
 export const storage = getStorage(app);
+export const database = getDatabase(app);

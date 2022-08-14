@@ -41,6 +41,7 @@ function Header() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [profile, setProfile] = useState();
+  const [isModalNotification, setIsModalNotification] = useState(false);
 
   const fetchProfile = async () => {
     const data = await getDocs(collection(db, "profile"));
@@ -62,7 +63,7 @@ function Header() {
   }, []);
 
   return (
-    <Router>
+    <>
       <div className="header">
         <div className="container">
           <div className="header-con">
@@ -151,10 +152,13 @@ function Header() {
               </Link>
             </div>
             <div className="mobile-notification">
-              {" "}
-              <Link to="/">
-                <img src={notification} alt="logo" />
-              </Link>
+              <img
+                src={notification}
+                alt="logo"
+                onClick={() => {
+                  setIsModalNotification(true);
+                }}
+              />
             </div>
           </div>
         </div>
@@ -253,14 +257,7 @@ function Header() {
           >
             หรือล็อกอินด้วยบัญชีโซเชียลมีเดียดังนี้
           </p>
-          <div
-            className={css`
-              width: 50%;
-              display: flex;
-              justify-content: space-between;
-              /*justify-content: center;*/
-            `}
-          >
+          <div>
             <button
               className={css`
                 padding: 0;
@@ -283,7 +280,21 @@ function Header() {
           </div>
         </div>
       </Modal>
-    </Router>
+
+      <Modal
+        title="การแจ้งเตือน"
+        visible={isModalNotification}
+        onOk={() => {
+          setIsModalNotification(false);
+        }}
+        onCancel={() => {
+          setIsModalNotification(false);
+        }}
+        footer={null}
+      >
+        <p>ยังไม่มีรายการ</p>
+      </Modal>
+    </>
   );
 }
 

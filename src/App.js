@@ -1,70 +1,36 @@
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Button, Modal } from "antd";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import MyRoute from "./MyRoute";
+import {
+  Router,
+  Switch,
+  Route,
+  Routes,
+  Link,
+  BrowserRouter,
+} from "react-router-dom";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
+import Relation from "./components/Relation";
 
 function App() {
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalNotification, setIsModalNotification] = useState(false);
 
   const showModal = () => {
-    setIsModalVisible(true);
+    setIsModalNotification(true);
   };
 
   const handleOk = () => {
-    setIsModalVisible(false);
+    setIsModalNotification(false);
   };
 
   const handleCancel = () => {
-    setIsModalVisible(false);
+    setIsModalNotification(false);
   };
 
-  function Relation() {
-    return <h2>Relation</h2>;
-  }
-
-  return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Home />
-        <Profile />
-        <Button type="primary" onClick={showModal}>
-          Open Modal
-        </Button>
-        <h1>45</h1>
-        <h1>45</h1>
-        <h1>45</h1>
-        <h1>45</h1>
-        <h1>45</h1>
-        <Switch>
-          <Route path="/Profile">
-            <Profile />
-          </Route>
-          <Route path="/Relation">
-            <Relation />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
-      <Modal
-        title="Basic Modal"
-        visible={isModalVisible}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Modal>
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
